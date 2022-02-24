@@ -111,9 +111,9 @@ function openinfo(){
 	$("#info_button").hide();
 	}
 
-	function closeinfo(){
-		$("#information_button").hide();
-		$("#information_close_button").hide();
-		$("#info_button").show();
-		}
+function closeinfo(){
+	$("#information_button").hide();
+	$("#information_close_button").hide();
+	$("#info_button").show();
+	}
 };
