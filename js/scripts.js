@@ -48,11 +48,10 @@ function object_type(type){
 		$('#msg').show();
 		$('#msg').html("Sustained!")
 	} else {
-		(videos['videos'][video]['objections'][objection]["type"]=correct_type)
 		console.log("Overruled! "+type+" objection not found.")
 		$("#msg").css("background-color", "red");
 		$('#msg').show();
-		$('#msg').html("Overruled! Test")
+		$('#msg').html("Overruled!  "+videos['videos'][video]['objections'][objection]["type"])
 	}
 };
 
