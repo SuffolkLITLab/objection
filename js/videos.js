@@ -2,6 +2,7 @@ videos =  {
             videos: [
                 {url:"scRAK5sWEcM",
                 objections:[
+                              {seconds:61,type:"leading"},
                               {minutes:2,seconds:54,type:"leading"},
                               {minutes:3,seconds:9,type:"leading"},
                               {minutes:3,seconds:20,type:"leading"},
