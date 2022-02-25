@@ -1,5 +1,5 @@
 
-var seconds = 0, minutes = 0, hours = 0, t, video=0, objection=0, correct=0, incorrect=0;
+var seconds = 0, minutes = 0, hours = 0, t, video=0, objection=0, correct=0, incorrect=0, info=0;
 
 function playvideo(){
 	console.log("Start video and timer.")
@@ -39,6 +39,19 @@ function object(){
 	}
 };
 
+function information(){
+	
+	if (info==0) {
+		$("#objection_types_info").show();
+		$("#msg").css("background-color", "white");
+		$('#msg').show();
+		$('#msg').html("What objection are you making?")
+		info++;
+	} else {
+		info=0;
+		$("#objection_types_info").hide();
+	}
+};
 function object_type(type){
 	$("#play_button").hide();
 	$("#object_button").show();
