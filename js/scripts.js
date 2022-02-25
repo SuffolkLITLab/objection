@@ -34,8 +34,7 @@ function object(){
 		$("#msg").css("background-color", "orange");
 		$('#msg').show();
 		$('#msg').html("Overruled! There's no objection here.")
-		incorrect++;
-		console.log("Incorrect("+incorrect+") Correct("+correct")")
+		incorrect = incorrect + 1;
 	}
 };
 
@@ -49,15 +48,13 @@ function object_type(type){
 		$("#msg").css("background-color", "green");
 		$('#msg').show();
 		$('#msg').html("Sustained!")
-		correct++;
-		console.log("Incorrect("+incorrect+") Correct("+correct")")
+		correct = correct + 1;
 	} else {
 		console.log("Overruled! "+type+" objection not found.")
 		$("#msg").css("background-color", "red");
 		$('#msg').show();
 		$('#msg').html("Overruled!  A "+videos['videos'][video]['objections'][objection]["type"]+" objection would have been sustained")
-		incorrect++;
-		console.log("Incorrect("+incorrect+") Correct("+correct")")
+		incorrect = incorrect + 1;
 	}
 };
 
