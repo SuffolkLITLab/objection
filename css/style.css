@@ -61,7 +61,7 @@ body {
 .vid_wrapper {
 	box-sizing: border-box;
 	float:left;
-	padding:0px 0 5px 0;
+	padding:25px 0 5px 0;
 }
 
 .embed_vid {
