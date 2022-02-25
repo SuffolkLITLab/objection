@@ -34,7 +34,6 @@ function object(){
 		$("#msg").css("background-color", "orange");
 		$('#msg').show();
 		$('#msg').html("Overruled! There's no objection here.")
-		incorrect++;
 	}
 };
 
