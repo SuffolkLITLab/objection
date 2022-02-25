@@ -1,5 +1,5 @@
 
-var seconds = 0, minutes = 0, hours = 0, t, video=0, objection=0;
+var seconds = 0, minutes = 0, hours = 0, t, video=0, objection=0, correct=0, incorrect=0;
 
 function playvideo(){
 	console.log("Start video and timer.")
