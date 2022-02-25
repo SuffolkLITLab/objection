@@ -61,7 +61,11 @@ body {
 .vid_wrapper {
 	box-sizing: border-box;
 	float:left;
+<<<<<<< HEAD
 	padding:0px 0 5px 0;
+=======
+	padding:25px 0 5px 0;
+>>>>>>> parent of f93b108 (Trying to fix what I broke)
 }
 
 .embed_vid {
