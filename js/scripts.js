@@ -35,6 +35,7 @@ function object(){
 		$('#msg').show();
 		$('#msg').html("Overruled! There's no objection here.")
 		incorrect = incorrect + 1;
+		$('#incorrect').val(incorrect);
 	}
 };
 
@@ -49,12 +50,14 @@ function object_type(type){
 		$('#msg').show();
 		$('#msg').html("Sustained!")
 		correct = correct + 1;
+		$('#correct').val(correct);
 	} else {
 		console.log("Overruled! "+type+" objection not found.")
 		$("#msg").css("background-color", "red");
 		$('#msg').show();
 		$('#msg').html("Overruled!  A "+videos['videos'][video]['objections'][objection]["type"]+" objection would have been sustained")
 		incorrect = incorrect + 1;
+		$('#incorrect').val(incorrect);
 	}
 };
 
