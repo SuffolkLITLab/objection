@@ -17,11 +17,9 @@ videos =  {
                               {seconds:97,type:"leading"},
                             ]},
                                    
-                {url:"X7KoVUspHys",
+                {url:"hV_gHXF8qcU",
                 objections:[
-                              {seconds:26,type:"hearsay"},
-                              {seconds:118,type:"hearsay"},
-                              {seconds:128,type:"leading"},
+                              {seconds:5,type:"hearsay"},
                             ]},
             ]
           }
