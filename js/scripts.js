@@ -63,9 +63,6 @@ function new_video(i){
 		$("#play_button").show();
 		$("#object_button").hide();
 		$("#objection_types").hide();
-		$("#information_button").hide();
-		$("#information_close_button").hide();
-		$("#info_button").show();
 		$("#msg").hide();
 	}
 }
