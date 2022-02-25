@@ -101,16 +101,3 @@ function pause_time() {
   $('#timer_div').css("background-color", "white");
   $('#timer').css("background-color", "white");
 }
-
-function openinfo(){
-	$("#information_button").show();
-	$("#information_close_button").show();
-	$("#info_button").hide();
-	}
-
-	function closeinfo(){
-		$("#information_button").hide();
-		$("#information_close_button").hide();
-		$("#info_button").show();
-		}
-};
