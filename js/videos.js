@@ -2,19 +2,19 @@ videos =  {
             videos: [
                 {url:"scRAK5sWEcM",
                 objections:[
-                              {seconds:61,type:"leading"},
-                              {minutes:2,seconds:54,type:"leading"},
-                              {minutes:3,seconds:9,type:"leading"},
-                              {minutes:3,seconds:20,type:"leading"},
-                              {minutes:3,seconds:36,type:"leading"},
-                              {minutes:3,seconds:57,type:"leading"},
-                              {minutes:4,seconds:15,type:"leading"},
+                              {seconds:174,type:"leading"},
+                              {seconds:189,type:"leading"},
+                              {seconds:210,type:"leading"},
+                              {seconds:216,type:"leading"},
+                              {seconds:237,type:"leading"},
+                              {seconds:255,type:"leading"},
                             ]},
-                // videos below this not set up             
-                {url:"tUcer5uc7PE",
+                            
+                {url:"I9OEr13Q6ac",
                 objections:[
-                              {seconds:5,type:"irrelevant"},
-                              {seconds:20,type:"leading"},
+                              {seconds:27,type:"leading"},
+                              {seconds:77,type:"leading"},
+                              {seconds:97,type:"leading"},
                             ]},
             ]
           }
