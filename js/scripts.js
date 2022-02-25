@@ -51,7 +51,7 @@ function object_type(type){
 		console.log("Overruled! "+type+" objection not found.")
 		$("#msg").css("background-color", "red");
 		$('#msg').show();
-		$('#msg').html("Overruled!  A "+videos['videos'][video]['objections'][objection]["type"]+"objection would have been sustained")
+		$('#msg').html("Overruled!  "+videos['videos'][video]['objections'][objection]["type"])
 	}
 };
 
