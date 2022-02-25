@@ -2,9 +2,10 @@ videos =  {
             videos: [
                 {url:"676YnVaEoF8",
                 objections:[
-                              {seconds:5,type:"hearsay"},
+                              {seconds:1,type:"leading"},
                               {seconds:10,type:"speculative"},
                             ]},
+                // videos below this not set up             
                 {url:"tUcer5uc7PE",
                 objections:[
                               {seconds:5,type:"irrelevant"},
