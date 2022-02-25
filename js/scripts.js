@@ -53,6 +53,61 @@ function object_type(type){
 		$('#msg').show();
 		$('#msg').html("Overruled!  "+videos['videos'][video]['objections'][objection]["type"])
 	}
++
+var seconds = 0, minutes = 0, hours = 0, t, video=0, objection=0;
+
+function playvideo(){
+	console.log("Start video and timer.")
+	$("#play_button").hide();
+	$("#object_button").show();
+	$("#objection_types").hide();
+	$("#msg").hide();
+	$("#video1")[0].src += "&autoplay=1";
+	start_time();
+};
+
+function object(){
+	found = 0;
+	$("#play_button").hide();
+	$("#msg").hide();
+	time = hours*60+minutes*60+seconds
+	for (let i = 0; i < videos['videos'][video]['objections'].length; i++) {
+			if ((videos['videos'][video]['objections'][i]["seconds"]-1<time) & (videos['videos'][video]['objections'][i]["seconds"]+3>time)) {
+				found = 1;
+				objection = i;
+			}
+	}
+	if (found==1) {
+		console.log("There is a valid objection around "+time+" seconds.")
+		$("#object_button").hide();
+		$("#objection_types").show();
+		$("#msg").css("background-color", "yellow");
+		$('#msg').show();
+		$('#msg').html("What objection are you making?")
+	} else {
+		console.log("No objection found around "+time+" seconds.")
+		$("#msg").css("background-color", "orange");
+		$('#msg').show();
+		$('#msg').html("Overruled! There's no objection here.")
+	}
+};
+
+function object_type(type){
+	$("#play_button").hide();
+	$("#object_button").show();
+	$("#objection_types").hide();
+	$("#msg").hide();
+	if (videos['videos'][video]['objections'][objection]["type"]==type) {
+		console.log("Sustained!",type)
+		$("#msg").css("background-color", "green");
+		$('#msg').show();
+		$('#msg').html("Sustained!")
+	} else {
+		console.log("Overruled! "+type+" objection not found.")
+		$("#msg").css("background-color", "red");
+		$('#msg').show();
+		$('#msg').html("Overruled!")
+	}
 };
 
 function new_video(i){
@@ -63,9 +118,6 @@ function new_video(i){
 		$("#play_button").show();
 		$("#object_button").hide();
 		$("#objection_types").hide();
-		$("#information_button").hide();
-		$("#information_close_button").hide();
-		$("#info_button").show();
 		$("#msg").hide();
 	}
 }
@@ -104,16 +156,3 @@ function pause_time() {
   $('#timer_div').css("background-color", "white");
   $('#timer').css("background-color", "white");
 }
-
-function openinfo(){
-	$("#information_button").show();
-	$("#information_close_button").show();
-	$("#info_button").hide();
-	}
-
-function closeinfo(){
-	$("#information_button").hide();
-	$("#information_close_button").hide();
-	$("#info_button").show();
-	}
-};
