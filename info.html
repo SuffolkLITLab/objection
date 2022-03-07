@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>I Object!</title>
+
+  <meta property="og:type" content="website"/>
+	<meta property="og:title" content="I Object!"/>
+	<meta property="og:description" content="description here"/>
+  <meta property="og:image" content="/images/.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@SuffolkLITLab">
+	<meta name="twitter:creator" content="@SuffolkLITLab">
+	<meta name="twitter:title" content="I Object!">
+	<meta name="twitter:description" content="description here">
+	<meta name="twitter:image" content="/images/.png"/>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/scripts.js"></script>
+  <script src="js/videos.js"></script>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+  <div class="content_frame">
+    <div class="header">
+      <div class="header_content" style="text-align: center;font-size:32px;background:rgb(255, 255, 255)">
+        <p><i>iObject!!!</i></p>
+      </div>
+    </div>
+    <!-- Start navbar -->
+    <div class="navbar">
+      <div class="navbar_content">
+        <span style="float:center;">
+          <select style="width:200px;height:24px;" onChange="new_video(this.value);">
+            <option value="null">Choose a Video</option>
+            <option value="0">Law & Order: Video 1</option>
+            <option value="1">Law & Order: Video 2</option>
+            <option value="2">Lincoln Lawyer: Video 1</option>
+          </select>
+        </span>
+        <input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" readonly>
+        <p style="float:right;width:100px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px"><i><a href="https://suffolklitlab.org/objection/info">information</a></i></p>
+      </div>
+    </div>
+    <!-- End navbar -->
+
+    <div class="content">
+      <p><i>Start video by clicking on the green "Play Video" button only, NOT by clicking on the video!</i></p>
+      <p>Number of Sustained Objections:<input id="correct" type=text style="width:24px;height:20px;font-size:18px;line-height:1px;text-align:left;border:0px;background:white;margin:0 5px" value="0" readonly> Number of Overruled Objections:<input id="incorrect" type=text style="width:24px;height:20px;font-size:18px;line-height:1px;text-align:left;border:0px;background:white;margin:0 5px"  value="0" readonly></p>
+      <!-- Start video -->
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" id="video1" width="100%" src="https://www.youtube-nocookie.com/embed/scRAK5sWEcM?controls=0&showinfo=0&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- End video -->
+
+      <div id="msg">message here</div>
+
+      <!-- Start buttons -->
+      <div id="play_button">
+        <div class="button_frame">
+          <a href="javascript:void('')" onClick="playvideo()"><div class="button" style="background:green;">Play Video</div></a>
+        </div>
+      </div>
+
+      <div id="object_button" style="display:none;">
+        <div class="button_frame">
+          <a href="javascript:void('')" onClick="object()"><div class="button" style="background:orange;">Objection!!!!</div></a>
+        </div>
+      </div>
+
+      <div id="objection_types" style="display:none;">
+        <div class="button_frame">
+          <a href="javascript:void('')" onClick="object_type('irrelevant')"><div class="button">Irrelevant</div></a>
+          <a href="javascript:void('')" onClick="object_type('hearsay')"><div class="button">Hearsay</div></a>
+          <a href="javascript:void('')" onClick="object_type('speculative')"><div class="button">Speculative</div></a>
+          <a href="javascript:void('')" onClick="object_type('argumentative')"><div class="button">Argumentative</div></a>
+          <a href="javascript:void('')" onClick="object_type('leading')"><div class="button">Leading</div></a>
+          <a href="javascript:void('')" onClick="object_type('repetitive')"><div class="button">Repetitive</div></a>
+        </div>
+      </div>
+      <!-- End buttons -->
+      
+    </div> 
+    <!-- start info -->
+    <!--<div>
+      <p><i><a href="javascript:void('')" onClick="information()">Click here to open or close objection type information</a></i></p>
+       <div id="objection_types_info" style="display:none;">      
+         <p><b>Irrelevant</b></p>
+         <small><p>Evidence is relevant if it has any tendency to make a fact more or less probable than it would be without the evidence and the fact is of consequence in determining the action.</p>
+         <p><i>For more information <a href="https://www.law.cornell.edu/rules/fre/rule_401" target="_blank">click here</a></i></p></small>
+         <p><b>Speculative</b></p>
+         <small><p>A witness cannot jump to conclusions that are not based on what the witness experienced.</p></small>
+         <p><b>Hearsay</b></p>
+         <small><p>Hearsay is something a witness may have heard about, but did not hear or see firsthand.</p>  
+         <p><i>For more information <a href="https://www.law.cornell.edu/wex/hearsay" target="_blank">click here</a></i></p></small>
+         <p><b>Argumentative</b></p>
+         <p><b>Leading</b></p>  
+         <p><b>Repetitive</b></p>
+        </div>
+    </div>
+  -->
+    <!-- end info -->
+
+
+
+  </div>
+</div>
+
+</BODY>
+<HTML>
